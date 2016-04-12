@@ -1,0 +1,26 @@
+{
+  "name": "front-end-challenge",
+  "version": "1.0.0",
+  "description": "Esper Front End Developer Challenge",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "lodash": "^4.10.0",
+    "moment": "^2.12.0",
+    "moment-timezone": "^0.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esperco/front-end-challenge.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/esperco/front-end-challenge/issues"
+  },
+  "homepage": "https://github.com/esperco/front-end-challenge#readme"
+}
