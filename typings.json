@@ -1,0 +1,23 @@
+{
+  "ambientDependencies": {
+    "bootstrap": "github:esperco/DefinitelyTyped/bootstrap/bootstrap.d.ts#f53108644c2f32b93de423d844650297fc415a8b",
+    "jasmine": "github:esperco/DefinitelyTyped/jasmine/jasmine.d.ts#f53108644c2f32b93de423d844650297fc415a8b",
+    "jquery": "github:esperco/DefinitelyTyped/jquery/jquery.d.ts#f53108644c2f32b93de423d844650297fc415a8b",
+    "lodash": "github:DefinitelyTyped/DefinitelyTyped/lodash/lodash.d.ts#c8630523ef2ee3fb42fe65cc17af5b1b56e611bc",
+    "moment": "github:esperco/DefinitelyTyped/moment/moment.d.ts#f53108644c2f32b93de423d844650297fc415a8b",
+    "moment-node": "github:esperco/DefinitelyTyped/moment/moment-node.d.ts#f53108644c2f32b93de423d844650297fc415a8b",
+    "moment-timezone": "github:esperco/DefinitelyTyped/moment-timezone/moment-timezone.d.ts#f53108644c2f32b93de423d844650297fc415a8b",
+    "page": "github:esperco/DefinitelyTyped/page/page.d.ts#f53108644c2f32b93de423d844650297fc415a8b",
+    "react": "github:esperco/DefinitelyTyped/react/react.d.ts#e3a7583dc379d3b178216fcd444b0ea64aed66e0",
+    "react-addons-create-fragment": "github:esperco/DefinitelyTyped/react/react-addons-create-fragment.d.ts#e3a7583dc379d3b178216fcd444b0ea64aed66e0",
+    "react-addons-css-transition-group": "github:esperco/DefinitelyTyped/react/react-addons-css-transition-group.d.ts#e3a7583dc379d3b178216fcd444b0ea64aed66e0",
+    "react-addons-linked-state-mixin": "github:esperco/DefinitelyTyped/react/react-addons-linked-state-mixin.d.ts#e3a7583dc379d3b178216fcd444b0ea64aed66e0",
+    "react-addons-perf": "github:esperco/DefinitelyTyped/react/react-addons-perf.d.ts#e3a7583dc379d3b178216fcd444b0ea64aed66e0",
+    "react-addons-pure-render-mixin": "github:esperco/DefinitelyTyped/react/react-addons-pure-render-mixin.d.ts#e3a7583dc379d3b178216fcd444b0ea64aed66e0",
+    "react-addons-test-utils": "github:esperco/DefinitelyTyped/react/react-addons-test-utils.d.ts#e3a7583dc379d3b178216fcd444b0ea64aed66e0",
+    "react-addons-transition-group": "github:esperco/DefinitelyTyped/react/react-addons-transition-group.d.ts#e3a7583dc379d3b178216fcd444b0ea64aed66e0",
+    "react-addons-update": "github:esperco/DefinitelyTyped/react/react-addons-update.d.ts#e3a7583dc379d3b178216fcd444b0ea64aed66e0",
+    "react-dom": "github:esperco/DefinitelyTyped/react/react-dom.d.ts#e3a7583dc379d3b178216fcd444b0ea64aed66e0",
+    "react-global": "github:esperco/DefinitelyTyped/react/react-global.d.ts#e3a7583dc379d3b178216fcd444b0ea64aed66e0"
+  }
+}
