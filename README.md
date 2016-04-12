@@ -1,5 +1,8 @@
 Esper Front End Developer Challenge
 ===================================
+
+![Screnshot of calendar coponent](screenshot.png?raw=true "Mr. Boggin's Reservation System")
+
 Mr. Boggins, a resident of a little town in the vicinity of Auckland, New
 Zealand has a spare room he wants to rent out from time to time. Due to an
 aversion to AirBnB's logo, he insists on developing his own system for managing
