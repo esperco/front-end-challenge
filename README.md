@@ -1,7 +1,7 @@
 Esper Front End Developer Challenge
 ===================================
 
-![Screnshot of calendar coponent](screenshot.png?raw=true "Mr. Boggin's Reservation System")
+<img src="/screenshot.png" width="600px" align="center" />
 
 Mr. Boggins, a resident of a little town in the vicinity of Auckland, New
 Zealand has a spare room he wants to rent out from time to time. Due to an
@@ -22,7 +22,6 @@ the availability of this room. Specifically, he wants the following things:
 
 Using this repository as base, please help Mr. Boggins develop the front-end
 for his app.
-
 
 Rules
 -----
