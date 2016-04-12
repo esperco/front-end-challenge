@@ -94,8 +94,9 @@ app.get('/reserved/:start/:end', function(request, response) {
 });
 
 // End-point to change
-app.post('/reserved', function(request, response) {
-  var date = request.body && request.body.date;
+app.put('/reserved/:date', function(request, response) {
+  var date = request.params.date;
+  var reserved = !!request.body.reserved;
   if (isNaN(date)) {
     badRequest(response);
     return;
@@ -106,9 +107,13 @@ app.post('/reserved', function(request, response) {
   }
   else {
     var date = moment.unix(date).tz(locale).startOf('day').unix();
-    data.push(date);
-    data.sort();
-    data = _.sortedUniq(data);
+    if (reserved) {
+      data.push(date);
+      data.sort();
+      data = _.sortedUniq(data);
+    } else {
+      _.pull(data, date);
+    }
     send(response, {
       ok: true
     });
