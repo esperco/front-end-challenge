@@ -26,7 +26,7 @@ namespace Index {
       <div className="container">
         <div className="navbar-header">
           <span className="navbar-brand">
-            Mr. Boggin's Room Reservation System
+            Mr. Boggin's Reservation System
           </span>
         </div>
       </div>
