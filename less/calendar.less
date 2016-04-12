@@ -1,0 +1,47 @@
+// For calendar grid charts, not full calendar
+@import "./variables";
+
+.month-name {
+  text-align: center;
+  font-size: @font-size-large;
+  padding-bottom: @padding-large-vertical;
+}
+
+table.cal-month {
+  width: 100%;
+  margin-bottom: @padding-large-vertical;
+  table-layout:fixed;
+
+  thead {
+    height: 1em;
+  }
+
+  th {
+    text-align: center;
+  }
+
+  td, th {
+    vertical-align: top;
+    border: 1px solid @table-border-color;
+    width: calc(100% / 7);
+    overflow: hidden;
+
+  }
+
+  td {
+    padding: @padding-small-vertical @padding-small-horizontal;
+    min-height: 10vh;
+  }
+
+  .out-month {
+    color: @gray-lighter;
+  }
+
+  .in-month {
+  }
+
+  .day-number {
+    text-align: right;
+    padding: @padding-xs-vertical @padding-xs-horizontal;
+  }
+}
