@@ -1,4 +1,4 @@
-// Helpers for client-side router
+// Helpers for client-side hashbang routing
 
 namespace Routes {
   function render(elm: JSX.Element) {

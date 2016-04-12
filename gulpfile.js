@@ -87,6 +87,33 @@ gulp.task("watch-assets", function() {
 });
 
 
+/* Misc stuff for Jasmine test runner */
+
+var JASMINE_ROOT = "./node_modules/jasmine-core/lib/jasmine-core";
+gulp.task("build-jasmine-js", function() {
+  var jasmineJs = _.map([
+    "jasmine.js",
+    "jasmine-html.js",
+    "boot.js"
+  ], function(fn) {
+    return path.join(JASMINE_ROOT, fn);
+  });
+  return gulp.src(jasmineJs).pipe(gulp.dest("./pub/js"));
+});
+
+gulp.task("build-jasmine-css", function() {
+  var jasmineCss = _.map([
+    "jasmine.css"
+  ], function(fn) {
+    return path.join(JASMINE_ROOT, fn);
+  });
+  return gulp.src(jasmineCss).pipe(gulp.dest("./pub/css"));
+});
+
+gulp.task("build-jasmine",
+  gulp.parallel("build-jasmine-js", "build-jasmine-css"));
+
+
 /* Dev server */
 
 gulp.task("dev-server", function(cb) {
@@ -113,6 +140,7 @@ gulp.task("clean", function() {
 
 gulp.task("build", gulp.series("clean",
   gulp.parallel("build-assets",
+                "build-jasmine",
                 "build-vendor",
                 "build-ts",
                 "build-less")));

@@ -5,33 +5,35 @@
 namespace Calendar {
 
   // Shows a month
-  export function Month({date}: {date: Date}) {
-    var month = moment(date).month();
+  export class Month extends React.Component<{date: Date}, {}> {
+    render() {
+      var date = this.props.date;
+      var month = moment(date).month();
+      var start = moment(date).clone()
+        .startOf('month').startOf('week');
+      var end = moment(date).clone().endOf('month');
+      var weeks: Date[] = [];
+      while (start <= end) {
+        weeks.push(start.clone().toDate());
+        start.add(1, 'week');
+      }
 
-    var start = moment(date).clone()
-      .startOf('month').startOf('week');
-    var end = moment(date).clone().endOf('month');
-    var weeks: Date[] = [];
-    while (start <= end) {
-      weeks.push(start.clone().toDate());
-      start.add(1, 'week');
+      return <div className="calendar-holder">
+        <div className="month-name">
+          { moment(date).format("MMM YYYY") }
+        </div>
+        <table className="cal-month">
+          <thead>
+            <Headings />
+          </thead>
+          <tbody>
+            { _.map(weeks,
+              (date, i) => <Week key={i} date={date} month={month} />
+            ) }
+          </tbody>
+        </table>
+      </div>;
     }
-
-    return <div className="calendar-holder">
-      <div className="month-name">
-        { moment(date).format("MMM YYYY") }
-      </div>
-      <table className="cal-month">
-        <thead>
-          <Headings />
-        </thead>
-        <tbody>
-          { _.map(weeks,
-            (date, i) => <Week key={i} date={date} month={month} />
-          ) }
-        </tbody>
-      </table>
-    </div>;
   }
 
   // Calendar headings (Su, M, Tu, ... )

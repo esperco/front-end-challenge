@@ -11,6 +11,7 @@ window.moment = require("moment-timezone");
 window.page = require("page");
 window.React = require("react");
 window.ReactDOM = require("react-dom");
+window.ReactTestUtils = require("react-addons-test-utils");
 
 // This modifies jQuery
 require("bootstrap");
