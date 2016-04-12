@@ -36,6 +36,15 @@ var data = [
 ];
 
 
+// Probably not the safest way to handle CORS
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers",
+             "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+
 // Simulate failure every so often
 var failureProb = 0.1;
 
@@ -63,7 +72,7 @@ function internalError(response) {
 
 // End-point to get booked nights
 // * start and end are integers (seconds since Unix epoch)
-app.get('/nights/:start/:end', function(request, response) {
+app.get('/reserved/:start/:end', function(request, response) {
   var start = parseInt(request.params.start);
   var end   = parseInt(request.params.end);
   if (isNaN(start) || isNaN(end)) {
@@ -76,16 +85,16 @@ app.get('/nights/:start/:end', function(request, response) {
     return;
   }
 
-  var nights = _.filter(data, function(night) {
+  var reserved = _.filter(data, function(night) {
     return night >= start && night <= end;
   });
   send(response, {
-    nights: nights
+    reserved: reserved
   });
 });
 
 // End-point to change
-app.post('/nights', function(request, response) {
+app.post('/reserved', function(request, response) {
   var date = request.body && request.body.date;
   if (isNaN(date)) {
     badRequest(response);
@@ -106,4 +115,13 @@ app.post('/nights', function(request, response) {
   }
 });
 
-app.listen(3000);
+// Get server time
+app.get('/now', function(request, response) {
+  send(response, {
+    time: moment(new Date()).unix()
+  });
+});
+
+var port = 3000;
+console.info("API server listening at http://localhost:" + port)
+app.listen(port);
