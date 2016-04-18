@@ -21,7 +21,8 @@ the availability of this room. Specifically, he wants the following things:
   how that guest will pay to be irrelevant.
 
 Using this repository as base, please help Mr. Boggins develop the front-end
-for his app.
+for his app. We esimate that this would some familiar with Typescript and
+React no more than 6 hours to complete.
 
 Rules
 -----
@@ -33,13 +34,17 @@ Rules
 * If you stumble upon someone else's solution to this exercise, please don't
   look at it or copy it.
 
-* We want you to "finish" the app, not rewrite it entirely. This app uses
-  the libraries and coding style we currently use for front-end at Esper. The
-  purpose of this exercise is intended to evaluate how you would work with
-  an existing code-base, not create a new app from scratch. You are welcome
-  to bring in new libraries or use whatever tools you think are necessary,
-  but please don't, for example, throw out the React and Typescript code and
-  rewrite everything in Angular and Coffescript.
+* You can use any libraries or tools that you want. We've provided an existing
+  code-base written with the tools that we use at Esper, and we encourage you
+  to build off of it. However, you are welcome to rewrite or modify whatever
+  you need to complete this challenge in a reasonable amount of time. Just
+  make sure you use the API server we've provided and that we can build and
+  serve your code with a minimal number of terminal commands.
+
+* Because we may re-use this challenge with other engineering candidates,
+  please don't fork this repo off Github or otherwise make your solution
+  easily discoverable. You may submit your solution via zip file or link
+  to a private repo.
 
 
 Getting Started
