@@ -21,8 +21,8 @@ the availability of this room. Specifically, he wants the following things:
   how that guest will pay to be irrelevant.
 
 Using this repository as base, please help Mr. Boggins develop the front-end
-for his app. We esimate that this would some familiar with Typescript and
-React no more than 6 hours to complete.
+for his app. We estimate that this would take someone familiar with Typescript
+and React no more than 6 hours to complete.
 
 Rules
 -----
