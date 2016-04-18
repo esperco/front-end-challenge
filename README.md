@@ -112,10 +112,10 @@ We've written some basic bits for you already:
 Evaluation Criteria
 -------------------
 * We don't expect you to be super familiar with Typescript, React, LESS, or
-  anything else we're using here, and we're not going to penalize you if you
-  don't know about Random Typescript Feature X. We are evaluating your ability
-  to find your way around an existing code-base however. Feel free to ask us
-  if you have questions about how anything works.
+  anything else we're using here. We consider it a plus if you can complete
+  this exercise using what's already here, but if you think you can do a
+  better job using other tools, that's fine. Feel free to ask us if you have
+  questions about how anything works.
 
 * We're looking for signs you understand Javascript concepts such as events
   and promises, and how to handle various representations of time.
