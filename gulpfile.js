@@ -75,7 +75,7 @@ gulp.task("build-vendor", function() {
 });
 
 
-/* Uncompiled assets */
+/* Our uncompiled assets */
 
 gulp.task("build-assets", function() {
   return gulp.src("assets/**/*.*")
@@ -84,6 +84,15 @@ gulp.task("build-assets", function() {
 
 gulp.task("watch-assets", function() {
   return gulp.watch("assets/**/*.*", gulp.series("build-assets"));
+});
+
+
+/* Bootstrap fonts */
+
+gulp.task("build-fonts", function() {
+  return gulp.src([
+    "./node_modules/bootstrap/fonts/**/*.*"
+  ]).pipe(gulp.dest("./pub/fonts"));
 });
 
 
@@ -140,6 +149,7 @@ gulp.task("clean", function() {
 
 gulp.task("build", gulp.series("clean",
   gulp.parallel("build-assets",
+                "build-fonts",
                 "build-jasmine",
                 "build-vendor",
                 "build-ts",
