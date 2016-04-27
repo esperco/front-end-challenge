@@ -3,16 +3,16 @@
 */
 
 namespace Calendar {
-  var locale = "Pacific/Auckland";
 
   // Shows a month
-  export class Month extends React.Component<{date: Date}, {}> {
+  export class Month extends React.Component<{
+    date: Date|moment.Moment
+  }, {}> {
     render() {
       var date = this.props.date;
       var month = moment(date).month();
-      var start = moment(date).tz(locale).clone()
-        .startOf('month').startOf('week');
-      var end = moment(date).tz(locale).clone().endOf('month');
+      var start = moment(date).clone().startOf('month').startOf('week');
+      var end = moment(date).clone().endOf('month');
       var weeks: Date[] = [];
       while (start <= end) {
         weeks.push(start.clone().toDate());
