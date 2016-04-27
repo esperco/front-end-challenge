@@ -9,7 +9,7 @@ aversion to AirBnB's logo, he insists on developing his own system for managing
 the availability of this room. Specifically, he wants the following things:
 
 * He should be able to check a calendar for which nights are booked or
-  available for any given month. Each calendar day should refer to the night
+  available for *any given month*. Each calendar day should refer to the night
   *following* that day -- i.e. if the night of April 4-5 is booked, this should
   show up on the  calendar as April 4.
 * He should be able to toggle the availability of that night by clicking
@@ -43,8 +43,8 @@ Rules
 
 * Because we may re-use this challenge with other engineering candidates,
   please don't fork this repo off Github or otherwise make your solution
-  easily discoverable. You may submit your solution via zip file or link
-  to a private repo.
+  easily discoverable. You may submit your solution via zip file, patch, link
+  to a private repo, or whatever else makes sense to you.
 
 
 Getting Started
@@ -53,8 +53,8 @@ You'll need to install [NodeJS](https://nodejs.org/). Once you have NodeJS,
 clone this repo and run `npm run install`.
 
 Once everything is installed, run `npm run watch`. This will start both the
-API server (running on localhost:3000) and a development server with the
-front-end code (running on localhost:5000). Modifying the files in the `ts`,
+API server (running on `localhost:3000`) and a development server with the
+front-end code (running on `localhost:5000`). Modifying the files in the `ts`,
 `less`, or `assets` directory should trigger a rebuild.
 
 This app is written using Typescript, React, LESS, Bootstrap, moment.js,
@@ -76,13 +76,15 @@ The development server retains an ephemeral, in-memory store which nights have
 been booked. It has two endpoints you should be aware of:
 
 * `GET /reserved/:start/:end` - This returns a list of nights that have been
-  reserved between `:start` and `:end`, inclusive. `:start` and `:end` are Unix timestamps (seconds since Jan 1, 1970). The result will be JSON data in this
+  reserved between `:start` and `:end`, inclusive. `:start` and `:end` are Unix
+  timestamps (seconds since Jan 1, 1970). The result will be JSON data in this
   form: `{"reserved": [1451559600, 1452164400, ...]}`, where each number is
   also a Unix timestamp.
 
   Because Mr. Boggins lives in New Zealand, each timestamp refers to the
-  *start* of a day in **New Zealand**. Thus, the timestamp corresponding to
-  Feb 4, 2016 00:00:00 in New Zealand means the night of Feb 4 - Feb 5.
+  *start* of a day in **New Zealand** (specifically, the "Pacific/Auckland"
+  locale). Thus, the timestamp corresponding to Feb 4, 2016 00:00:00 in
+  Auckland, New Zealand means the night of Feb 4 - Feb 5.
 
 * `PUT /reserved/:date` - This takes a JSON-encoded object of the form
   `{"reserved": boolean}` where `reserved` indicates whether this date should
@@ -106,7 +108,7 @@ We've written some basic bits for you already:
 * There's a `Calendar.Month` component that you can use a basis for your app.
 
 * We've set up a simple Jasmine test runner at `localhost:5000/test.html`
-  if you want to run tests (see `ts/Test.tsx` for examples).
+  (see `ts/Test.tsx` for examples).
 
 
 Evaluation Criteria
@@ -114,19 +116,26 @@ Evaluation Criteria
 * We don't expect you to be super familiar with Typescript, React, LESS, or
   anything else we're using here. We consider it a plus if you can complete
   this exercise using what's already here, but if you think you can do a
-  better job using other tools, that's fine. Feel free to ask us if you have
-  questions about how anything works.
+  better job using other tools (Redux, Flux, Ember, etc.), that's fine. Feel
+  free to ask us if you have questions about how anything works.
 
 * We're looking for signs you understand Javascript concepts such as events
-  and promises, and how to handle various representations of time.
+  and promises.
 
 * The API server is sometimes slow and sometimes buggy. Your front-end code
   should handle this gracefully.
+  
+* Remember that the API server is giving your timestamps based on times in
+  Auckland, New Zealand. The existing front-end code here is *not* timezone-
+  aware, so you may have to modify it accordingly. We recommend looking at
+  [Moment Timezone](http://momentjs.com/timezone/).
 
 * We like code that is clean and easily testable. We honestly don't always do
   a great job of this ourselves, so your ability to demonstrate this is a big
   plus.
-
+  
+* Please comment your code.
+  
 * If you find this exercise too difficult or if you get stuck somewhere, feel
   free to talk to us. While we obviously prefer candidates who can hit the
   ground running, we're also willing to consider candidates who can, with
