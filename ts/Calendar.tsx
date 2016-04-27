@@ -20,8 +20,18 @@ namespace Calendar {
       }
 
       return <div className="calendar-holder">
-        <div className="month-name">
-          { moment(date).format("MMM YYYY") }
+        <div className="cal-header">
+          <span className="pull-left arrow-action"
+                onClick={() => console.error("Not implemented")}>
+            <i className="glyphicon glyphicon-chevron-left" />
+          </span>
+          <span className="pull-right arrow-action"
+                onClick={() => console.error("Not implemented")}>
+            <i className="glyphicon glyphicon-chevron-right" />
+          </span>
+          <span className="month-name">
+            { moment(date).format("MMM YYYY") }
+          </span>
         </div>
         <table className="cal-month">
           <thead>
