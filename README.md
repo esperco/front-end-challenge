@@ -22,12 +22,15 @@ the availability of this room. Specifically, he wants the following things:
 
 Using this repository as base, please help Mr. Boggins develop the front-end
 for his app. We estimate that this would take someone familiar with Typescript
-and React no more than 6 hours to complete.
+and React no more than 6 hours to complete, but don't worry if it takes you
+longer than that.
 
 Rules
 -----
 * You can discuss this exercise with anyone you want, but please do not ask
   anyone to write or review your actual code.
+
+* You can [contact us](https://esper.com/contact) at any time for any reason.
 
 * You can Google anything you need to.
 
@@ -93,7 +96,7 @@ been booked. It has two endpoints you should be aware of:
 
 Note that the API server is not the most reliable thing in the world. There is
 a 10% chance you will get a 500 Internal Server error. The front-end code
-should handle this scenario via some means other than an uncaught exception.
+should handle this scenario gracefully.
 
 
 Some Batteries Included
@@ -119,11 +122,17 @@ Evaluation Criteria
   better job using other tools (Redux, Flux, Ember, etc.), that's fine. Feel
   free to ask us if you have questions about how anything works.
 
-* We're looking for signs you understand Javascript concepts such as events
-  and promises.
+* Asking questions is good. We will not penalize you for asking questions.
+  In an actual work environment, we prefer that engineers spend 30 minutes
+  talking a problem over with someone than spend an entire day building
+  the wrong thing.
+
+* We're looking for signs you understand concepts such as events, promises,
+  and reactivity, and how those concepts are implemented in Javascript.
 
 * The API server is sometimes slow and sometimes buggy. Your front-end code
-  should handle this gracefully.
+  should handle this gracefully. It should also handle a complete loss of
+  connectivity gracefully.
   
 * Remember that the API server is giving your timestamps based on times in
   Auckland, New Zealand. The existing front-end code here is *not* timezone-
@@ -145,4 +154,3 @@ Evaluation Criteria
 Contact
 -------
 Feel free to [contact us](https://esper.com/contact) if you have any questions.
-
