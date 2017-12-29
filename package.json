@@ -19,7 +19,7 @@
   "devDependencies": {
     "browserify": "^11.0.1",
     "del": "^2.2.0",
-    "ecstatic": "^0.8.0",
+    "ecstatic": "^2.0.0",
     "gulp": "git://github.com/gulpjs/gulp.git#4.0",
     "gulp-less": "^3.0.3",
     "gulp-sourcemaps": "^1.5.2",
